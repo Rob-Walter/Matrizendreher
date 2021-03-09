@@ -10,4 +10,4 @@ Features
 + Nur __DU__ bestimmst wie oft die Matrize gedreht werden soll.
 + Lehne dich zurück und komm in den Genuss einer astrein gedrehten Matrize.
 
-###### Matrizendrehung nur in eine Richtung möglich - Machen Sie bitte nach einer Stunde Matrizendrehen mindestens 15 Minuten Pause!
+###### Matrizendrehung nur in eine Richtung möglich - Mache bitte nach einer Stunde Matrizendrehen mindestens 15 Minuten Pause!
