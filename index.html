@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrizen_Dreher</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/main.js" defer></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="heading" id="headline">Der ultimative Matrizen Dreher</h1>
+      <div class="content-container" id="create-matrix-container">
+        <h2 class="heading subheading">
+          Wie groß möchtest du deine Matrix haben?
+        </h2>
+        <div class="flex row">
+          <label for="size">Größe</label>
+          <!-- oninput geklaut bei https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input -->
+          <input
+            type="text"
+            name="size"
+            id="size"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            size="1"
+            maxlength="1"
+            value="1"
+          />
+          <button
+            type="button"
+            class="secondary-action-button"
+            id="set-size-button"
+          >
+            matrix erstellen
+          </button>
+        </div>
+      </div>
+      <div class="content-container hidden" id="created-matrix-container">
+        <h2 class="heading subheading">Ausgangs-Matrix</h2>
+        <div class="flex row" id="created-matrix-flex">
+          <div id="origin-matrix"></div>
+          <div class="flex column">
+            <h3 class="margin-bottom">Inhalt generieren</h3>
+            <button class="secondary-action-button" id="number-content-button">
+              zahlen
+            </button>
+            <button
+              class="secondary-action-button margin-top"
+              id="letter-content-button"
+            >
+              buchstaben
+            </button>
+            <button
+              class="secondary-action-button margin-top"
+              id="smiley-content-button"
+            >
+              smileys
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content-container hidden" id="rotate-matrix-container">
+        <h2 class="heading subheading">anzahl der drehungen</h2>
+        <div class="flex row">
+          <input
+            type="text"
+            name="rotate-count"
+            id="rotate-count"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+            size="1"
+            maxlength="1"
+            value="1"
+          />
+          <button
+            type="button"
+            class="secondary-action-button"
+            id="rotate-button"
+          >
+            matrix drehen
+          </button>
+        </div>
+      </div>
+      <div class="content-container hidden" id="result-matrix-container">
+        <h2 class="heading subheading">gedrehte matrix</h2>
+        <div id="result-matrix"></div>
+      </div>
+    </div>
+  </body>
+</html>
